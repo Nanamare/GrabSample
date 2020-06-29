@@ -51,8 +51,8 @@ class GeocodeAPITest : AutoCloseKoinTest() {
     }
 
     @Test
-    fun `주소로 위경도 조회 - geocode`() {
-        geocodeRepository.getLocationUseAddress("코드42")
+    fun `Search - geocode`() {
+        geocodeRepository.getLocationUseAddress("london")
             .subscribe({
                 Assert.assertNotNull(it)
             }, {
@@ -61,8 +61,8 @@ class GeocodeAPITest : AutoCloseKoinTest() {
     }
 
     @Test
-    fun `위경도로 주소 조회 - reverseGeocode`() {
-        geocodeRepository.getLocationUseLatLng("코드42")
+    fun `Search - reverseGeocode`() {
+        geocodeRepository.getLocationUseLatLng("51.509865,-0.118092")
             .subscribe({
                 Assert.assertNotNull(it)
             }, {
@@ -71,8 +71,8 @@ class GeocodeAPITest : AutoCloseKoinTest() {
     }
 
     @Test
-    fun `장소 검색`() {
-        geocodeRepository.getPlace("코드42")
+    fun `Search place`() {
+        geocodeRepository.getPlace("harvard")
             .subscribe({
                 Assert.assertNotNull(it)
             }, {

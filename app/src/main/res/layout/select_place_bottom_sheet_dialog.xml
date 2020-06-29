@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="코드42" />
+            tools:text="location name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_desc"
@@ -42,7 +42,7 @@
             android:text="@{String.format(@string/tv_address_description, mapVM.liveSelectPlaceType)}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_location_name"
-            tools:text="설명 넣기" />
+            tools:text="description" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_destination"

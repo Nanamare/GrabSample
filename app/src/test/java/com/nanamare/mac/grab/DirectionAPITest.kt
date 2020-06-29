@@ -29,7 +29,7 @@ class DirectionAPITest : AutoCloseKoinTest() {
     private val directionRepository by inject<DirectionRepository>()
 
     @Before
-    fun `초기화 및 모듈 주입`() {
+    fun `inject koin`() {
         MockitoAnnotations.initMocks(this)
 
         startKoin {
@@ -48,7 +48,7 @@ class DirectionAPITest : AutoCloseKoinTest() {
     }
 
     @Test
-    fun `드라이브 모드로 주행 정보 검색`() {
+    fun `Search Driving course using driving mode`() {
         // 미국 -> 멕시코 이동
         directionRepository.getDriveCourse("37.09024,-95.712891", "23.634501,-102.552784")
             .subscribe({

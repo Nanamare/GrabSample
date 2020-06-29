@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            tools:text="코드42" />
+            tools:text="Location name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_address"
@@ -32,7 +32,7 @@
             android:layout_marginTop="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            tools:text="서울시 강남구 남부순환로 2621" />
+            tools:text="Seoul paris london" />
 
 
     </LinearLayout>
