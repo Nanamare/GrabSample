@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">GrabSample</string>
+    <string name="toast_complete_departure">Departure setting completed</string>
+    <string name="toast_complete_destination">Destination setting completed</string>
+    <string name="toast_no_driving_route">There is no driving route</string>
+    <string name="departure">departure</string>
+    <string name="destination">destination</string>
+    <string name="marker_snippet_departure">Here is departure</string>
+    <string name="marker_snippet_destination">Here is destination</string>
+    <string name="toast_no_route_same_departure_destination">There is no driving route because it is the same as the departure and destination</string>
+    <string name="toast_finish_driving">Finished driving</string>
+    <string name="cancel">Cancel</string>
+    <string name="setting">Setting</string>
+    <string name="request_gps_permission">Allow GPS</string>
+    <string name="desc_gps_permission">Please allow access to the gps</string>
+    <string name="error_no_location">latLng is null</string>
+    <string name="error_failed_parsing_google_map_dark_mode_style">Failed to read Google Map Style, it runs in standard mode</string>
+    <string name="setting_departure">Setting departure</string>
+    <string name="setting_destination">Setting destination</string>
+    <string name="error_no_adapter_item">item is null</string>
+    <string name="tv_estimated_driving_time">Estimated driving time</string>
+    <string name="search_departure">Search departure</string>
+    <string name="search_destination">Search destination</string>
+    <string name="btn_start_driving_guide">Start driving guide</string>
+    <string name="btn_cancel_driving_guide">Cancel driving guide</string>
+    <string name="search_address">Please search address</string>
+    <string name="tv_recent_search_list">Recent search list</string>
+    <string name="tv_delete_all_search_list">Delete all</string>
+    <string name="tv_no_results">No results</string>
+    <string name="tv_address_description">Place types :  %s</string>
+</resources>

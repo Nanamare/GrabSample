@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mapVM"
+            type="com.nanamare.mac.grab.vm.MapViewModel" />
+
+        <variable
+            name="result"
+            type="com.nanamare.mac.grab.network.response.ReverseGeocodeResponse.Result" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_location_name"
+            style="@style/H2BoldBlack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@{result.formattedAddress}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="코드42" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            style="@style/H3RegularBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{String.format(@string/tv_address_description, mapVM.liveSelectPlaceType)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location_name"
+            tools:text="설명 넣기" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_destination"
+            style="@style/SmallButton"
+            onShortBlockClick="@{() -> mapVM.setDeparture(result.geometry.location, result.formattedAddress)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp"
+            android:text="@string/setting_departure"
+            app:layout_constraintEnd_toStartOf="@+id/tv_departure"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_departure"
+            style="@style/SmallButton"
+            onShortBlockClick="@{() -> mapVM.setDestination(result.geometry.location, result.formattedAddress)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp"
+            android:text="@string/setting_destination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_destination" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

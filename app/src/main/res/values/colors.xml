@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/gray_300</color>
+    <color name="colorAccent">@color/primary_500</color>
+
+    <color name="black_7">#12000000</color>
+    <color name="black_12">#1F000000</color>
+    <color name="black_38">#61000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_70">#B3000000</color>
+    <color name="black_87">#DE000000</color>
+
+    <color name="point_424C57">#FF424C57</color>
+    <color name="point_5FA9D0">#FF5FA9D0</color>
+    <color name="point_E47B75">#FFE47B75</color>
+
+    <color name="hover_color">#B4C0F2</color>
+
+    <color name="primary_500">#4363e6</color>
+    <color name="primary_400">#6d89fc</color>
+    <color name="primary_300">#a1b4ff</color>
+    <color name="primary_200">#d1daff</color>
+    <color name="primary_100">#dfe5ff</color>
+    <color name="primary_900">#2b314a</color>
+    <color name="primary_800">#2a3973</color>
+    <color name="primary_700">#253794</color>
+    <color name="primary_600">#1d45d2</color>
+    <color name="primary_800_opacity_30">#d9d9ee</color>
+    <color name="black">#020202</color>
+    <color name="gray_400_disabled">#cdced1</color>
+    <color name="gray_300">#e1e2e6</color>
+    <color name="gray_200">#f0f1f5</color>
+    <color name="gray_100">#f7f7f7</color>
+    <color name="gray_50">#fbfbfb</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_400">#cdced1</color>
+    <color name="gray_500">#adaeb3</color>
+    <color name="gray_600">#88898c</color>
+    <color name="gray_700">#6b6c73</color>
+    <color name="gray_800">#46474d</color>
+    <color name="gray_900">#232630</color>
+    <color name="secondary_500">#c87f32</color>
+    <color name="secondary_200">#f7ad61</color>
+    <color name="secondary_400">#ec9236</color>
+    <color name="secondary_200_opacity_30">#fce0c4</color>
+    <color name="secondary_300">#f5a623</color>
+    <color name="secondary_100">#fff7f0</color>
+    <color name="orange">#f56112</color>
+    <color name="green">#4ab475</color>
+    <color name="yellow">#f4c822</color>
+    <color name="yellow_light">#fbda3d</color>
+    <color name="error">#b00020</color>
+
+</resources>

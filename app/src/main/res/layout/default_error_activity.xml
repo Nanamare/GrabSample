@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="com.nanamare.mac.grab.base.ui.BaseDefaultErrorActivity" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sketch_symbol" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/H2BoldBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="일시적인 오류 입니다" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/H3RegularDarkgray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="잠시 후에 다시 시도해주세요" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{view.error}"
+                android:visibility='@{view.BUILD_TYPE.equals("debug") ? View.VISIBLE : View.GONE}' />
+
+        </LinearLayout>
+
+        <!-- android:background="@drawable/bg_btn_enable_selector" -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_next"
+            style="@style/BottomButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:enabled="true"
+            android:gravity="center"
+            android:onClick="@{() -> view.onRefresh()}"
+            android:text="새로고침" />
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <variable
+            name="searchPlaceVM"
+            type="com.nanamare.mac.grab.vm.SearchLocationViewModel" />
+
+        <variable
+            name="searchPlaceAdapter"
+            type="com.nanamare.mac.grab.adapter.SearchPlaceAdapter" />
+
+        <variable
+            name="recentSearchAdapter"
+            type="com.nanamare.mac.grab.base.ui.SimpleRecyclerView.Adapter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_200"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="16dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_toolbar_title"
+                style="@style/H2BoldBlack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_exit"
+                app:layout_constraintStart_toEndOf="@id/iv_back"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="toolbar title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/bg_search_selector">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_search"
+                enabled="@{searchPlaceVM.liveKeyword.length() > 0 ? true : false}"
+                onShortBlockClick="@{() -> searchPlaceVM.onSearchClick()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="12dp"
+                android:tint="@{searchPlaceVM.liveKeyword.length() > 0 ? @color/gray_800 : @color/gray_200}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_search" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_keyword"
+                style="@style/H3RegularBlack"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/search_address"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:lines="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@={searchPlaceVM.liveKeyword}"
+                android:textColorHint="@color/gray_500"
+                android:textCursorDrawable="@drawable/cursor_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="@{searchPlaceVM.liveKeyword.length() == 0  &amp;&amp; searchPlaceVM.liveLocalLocations.size() != 0 ? View.VISIBLE : View.GONE}"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/H3RegularBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="13dp"
+                    android:padding="5dp"
+                    android:text="@string/tv_recent_search_list"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/H3RegularBlack"
+                    onShortBlockClick="@{() -> searchPlaceVM.clearLocalLocations()}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="13dp"
+                    android:padding="5dp"
+                    android:text="@string/tv_delete_all_search_list"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_content_search"
+                adapter="@{searchPlaceAdapter}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_200"
+                android:visibility="@{searchPlaceVM.liveIsResultZero || searchPlaceVM.liveKeyword.length() == 0 ? View.GONE : View.VISIBLE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="20"
+                tools:listitem="@layout/search_place_item"
+                tools:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_content_recent"
+                adapter="@{recentSearchAdapter}"
+                replaceAll="@{searchPlaceVM.liveLocalLocations}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_200"
+                android:visibility="@{searchPlaceVM.liveKeyword.length() == 0 ? View.VISIBLE : View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="20"
+                tools:listitem="@layout/recent_search_place_item" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="@{searchPlaceVM.liveIsResultZero &amp;&amp; searchPlaceVM.liveKeyword.length() != 0 ? View.VISIBLE : View.GONE}">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/H2BoldBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_no_results" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="41dp"
+                    android:layout_marginBottom="77dp"
+                    app:srcCompat="@drawable/ic_sketch_symbol" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

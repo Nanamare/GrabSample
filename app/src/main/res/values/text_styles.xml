@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="H2RegularBlack">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">12sp</item>
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+
+    <style name="H3BoldGray">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <style name="H3BoldLightgray">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/gray_400_disabled</item>
+    </style>
+
+    <style name="H3BoldBlue">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/primary_500</item>
+    </style>
+
+    <style name="H3BoldLightblue">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/primary_300</item>
+    </style>
+
+    <style name="H3BoldWhite">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="H4RegularYellow">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/yellow_light</item>
+    </style>
+
+    <style name="H5BoldBlack">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="H5BoldWhite">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="H5RegularGray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="H5RegularDarkgray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+
+    <style name="H5RegularBlue">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/primary_500</item>
+    </style>
+
+    <style name="H5RegularLightblue">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/primary_300</item>
+    </style>
+
+    <style name="H5RegularError">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="H5RegularOrange">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="H1RegularBlack">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/primary_900</item>
+    </style>
+
+    <style name="H3BoldBlack">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="H3RegularDarkgray">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="H3RegularBlack">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="H4RegularDarkgray">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="H3RegularGray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <style name="H4RegularGray">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <style name="H4RegularBlack">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="H3RegularBlue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/primary_600</item>
+    </style>
+
+    <style name="H3RegularDisabled">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/gray_500</item>
+    </style>
+
+    <style name="H3RegularError">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="H2BoldBlackRight">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="H2BoldWhite">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="H3RegularWhite">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="H2BoldBlack">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="H5RegularDarkgrayAdd">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+
+    <style name="MegaBoldDarkblue">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/primary_700</item>
+    </style>
+
+    <style name="MegaRegularBlack">
+        <item name="android:textSize">26sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/gray_900</item>
+    </style>
+
+    <style name="MegaBoldBlue">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/primary_600</item>
+    </style>
+
+</resources>

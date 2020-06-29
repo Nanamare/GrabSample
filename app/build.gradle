@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.nanamare.mac.grab"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "develop"
+    productFlavors {
+        develop {
+            applicationIdSuffix ".develop"
+            buildConfigField "String", "LANGUAGE", "\"en\""
+            buildConfigField "String", "GOOGLE_SECRET_KEY", "\"AIzaSyDqEW94b4fCPgRhVShKWLcPG3PfOZjbaLk\""
+            buildConfigField "String", "SERVER_URL", "\"https://maps.googleapis.com/maps/api/\""
+            resValue "string", "google_secret_key", "AIzaSyDqEW94b4fCPgRhVShKWLcPG3PfOZjbaLk"
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+
+    testImplementation testImplementations.jUnit
+    androidTestImplementation androidTestImplementations.testRunner
+    androidTestImplementation androidTestImplementations.espressoCore
+    testImplementation testImplementations.mockitoKotlin
+    testImplementation testImplementations.mockitoInline
+
+    implementation libraries.material
+
+    implementation libraries.preference
+    implementation libraries.appcompat
+    implementation libraries.coreKTX
+    implementation libraries.constraintLayout
+
+    implementation libraries.rxJava2RxAndroid
+    implementation libraries.rxJava2RxJava
+
+    implementation libraries.loggingInterceptor
+    implementation libraries.okHttp
+    implementation libraries.retrofit2AdapterRxJava2
+    implementation libraries.retrofit2ConverterGson
+    implementation libraries.retrofit2
+
+    implementation libraries.glide
+    annotationProcessor annotationProcessors.glidCompiler
+
+    implementation libraries.koinScope
+    implementation libraries.koinViewModel
+    implementation libraries.koinFragment
+    testImplementation testImplementations.koinTest
+
+    implementation libraries.gson
+
+    implementation libraries.securePreference
+
+    implementation libraries.lottie
+
+    implementation libraries.rxBinding
+
+    implementation libraries.googleMap
+    implementation libraries.places
+
+    implementation libraries.tedPermission
+
+    implementation libraries.paging
+
+}
