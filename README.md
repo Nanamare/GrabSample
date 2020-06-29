@@ -7,6 +7,7 @@ This is a sample project for those who are wondering how to makes mobility app :
 If you want to use it as a real navigation app, just can change it to update your current location.
 <br>
 By default, My Google Key's registered, but if you change it plz
+<br>
 
 ### Feature
 1. Set the origin and destination by clicking on the map.
@@ -14,7 +15,8 @@ By default, My Google Key's registered, but if you change it plz
 3. Zoom in or out on the map.
 4. Can adjust the moving car's speed using object animation value
 
-<img src="https://github.com/Nanamare/GrabSample/blob/master/preview/sample.gif" align="right" width="38%"></img>
+<img src="https://github.com/Nanamare/GrabSample/blob/master/preview/sample.gif" align="right" width="45%"/>
+<img src="https://github.com/Nanamare/GrabSample/blob/master/preview/sample2.gif" width="45%"/>
 
 ### Feature Tech & Library [Link](https://github.com/Nanamare/GrabSample/blob/master/build.gradle)
 - Minimum SDK level 21
@@ -46,10 +48,7 @@ By default, My Google Key's registered, but if you change it plz
 - [Lottie](https://github.com/airbnb/lottie-android)
 - [RxBinding](https://github.com/JakeWharton/RxBinding)
 
-
-
 ### Is there useful?
 Click [stargazers](https://github.com/Nanamare/GrabSample/stargazers) for this repository :)
-
 
 ### Happy bon voyage-!
